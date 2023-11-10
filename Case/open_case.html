@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="open_case.css">
+    </head>
+    <body>
+
+    <div class="case-container">
+        <div class="case" id="case">
+            Case à ouvrir
+        </div>
+        <div class="button-container">
+            <button onclick="ouvrirCase()">Ouvrir la case</button>
+        </div>
+        <div class="item-container" id="items">
+            <!-- Les images et pourcentages seront ajoutés ici dynamiquement avec JavaScript -->
+        </div>
+    </div>
+
+    <script>
+        function ouvrirCase() {
+            // Simulation des résultats de la case (images et pourcentages)
+            var items = [
+                { name: "Objet1", rarity: "common", chance: 30 },
+                { name: "Objet2", rarity: "uncommon", chance: 20 },
+                { name: "Objet3", rarity: "rare", chance: 15 },
+                { name: "Objet4", rarity: "legendary", chance: 5 },
+            ];
+
+            var itemsContainer = document.getElementById("items");
+            itemsContainer.innerHTML = "";
+
+            items.forEach(function(item) {
+                var itemElement = document.createElement("div");
+                itemElement.className = "item " + item.rarity;
+                itemElement.innerHTML = "<img src='" + item.name + ".jpg' alt='" + item.name + "'><br>" +
+                                        "<strong>" + item.name + "</strong><br>" +
+                                        "Chance: " + item.chance + "%";
+                itemsContainer.appendChild(itemElement);
+            });
+        }
+    </script>
+
+    </body>
+</html>

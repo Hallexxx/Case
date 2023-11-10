@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.case-container {
+    text-align: center;
+    margin: 50px;
+}
+
+.case {
+    border: 2px solid #333;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.item-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.item {
+    border: 2px solid;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+}
+
+.common {
+    border-color: green;
+}
+
+.uncommon {
+    border-color: blue;
+}
+
+.rare {
+    border-color: purple;
+}
+
+.legendary {
+    border-color: orange;
+}
